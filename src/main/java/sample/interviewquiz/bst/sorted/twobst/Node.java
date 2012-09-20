@@ -46,20 +46,20 @@ public class Node {
 
 	private void doAdd(Node node, int value) {
 
-		if ( this.getData() > value ) {
-			if ( this.getLeft() == null ) {
-				this.setLeft( new Node( value ) );
+		if ( node.getData() > value ) {
+			if ( node.getLeft() == null ) {
+				node.setLeft( new Node( value ) );
 			}
 			else {
-				doAdd( this.getLeft(), value );
+				doAdd( node.getLeft(), value );
 			}
 		}
-		else if ( this.getData() < value ) {
-			if ( this.getRight() == null ) {
-				this.setRight( new Node( value ) );
+		else if (node.getData() < value ) {
+			if ( node.getRight() == null ) {
+				node.setRight( new Node( value ) );
 			}
 			else {
-				doAdd( this.getRight(), value );
+				doAdd( node.getRight(), value );
 			}
 		}
 	}
